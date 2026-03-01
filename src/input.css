@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    /* Primary */
+    --color-cust-blue-600: hsl(231, 69%, 60%);
+    --color-cust-red-400: hsl(0, 94%, 66%);
+
+    /* Neutral */
+    --color-cust-grey-50: hsl(0, 0%, 97%);
+    --color-cust-blue-950: hsl(229, 31%, 21%);
+
+    /* font size */
+    --text-cust: 18px;
+}
