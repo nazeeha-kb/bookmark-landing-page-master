@@ -20,3 +20,91 @@
     /* font size */
     --text-cust: 18px;
 }
+
+@layer base {
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply text-cust-blue-950 font-medium;
+    }
+
+    p {
+        @apply text-cust-blue-950/50;
+    }
+
+    button {
+        @apply cursor-pointer font-[450];
+    }
+
+    a {
+        @apply cursor-pointer;
+    }
+
+    hr {
+        @apply text-cust-blue-950/15;
+    }
+}
+
+@layer components {
+    .btn-blue {
+        @apply py-3 px-4 shadow-md bg-cust-blue-600 hover:bg-white hover:border-2 hover:border-cust-blue-600 hover:text-cust-blue-600 transition-all duration-200 text-white rounded-sm;
+    }
+
+    .btn {
+        @apply py-3 px-4 hover:bg-white shadow-md rounded-sm text-cust-blue-950/80;
+    }
+
+    /* Card */
+
+    .card {
+        @apply flex flex-col justify-center items-center shadow-lg rounded-xl w-fit py-6;
+    }
+
+    .card__item {
+        @apply flex flex-col items-center justify-center pt-8;
+    }
+
+    .card__item img {
+        @apply size-25 mb-5;
+    }
+
+    .bg-dots {
+        @apply pt-10 pb-6;
+    }
+
+    .card button {
+        @apply px-[1.8rem];
+    }
+
+    /* FAQs */
+    #accordian {
+        @apply text-start pt-18 pb-14;
+    }
+
+    #accordian .faq-answer {
+        @apply max-h-0 transition-all duration-200 overflow-hidden;
+    }
+
+    /* Hide the radio button */
+    #accordian label+input[type="radio"] {
+        @apply hidden;
+    }
+
+    /* If radio checked - faq expanded */
+    #accordian label + input[type="radio"]:checked + .faq-answer {
+        @apply max-h-50;
+    }
+}
