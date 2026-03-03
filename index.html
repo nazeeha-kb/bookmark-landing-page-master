@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
+  <script defer src="main.js"></script>
   <title>Frontend Mentor | Bookmark landing page</title>
 </head>
 
@@ -47,7 +48,9 @@
           browser tab and see your sites load instantly. Try it for free.</p>
         <div class="flex gap-4">
           <button class="btn-blue">Get it on Chrome</button>
-          <button class="btn bg-cust-grey-50 hover:bg-white hover:border-cust-blue-950/80 hover:border-2 transition-all ease-out">Get it on Firefox</button>
+          <button
+            class="btn bg-cust-grey-50 hover:bg-white hover:border-cust-blue-950/80 hover:border-2 transition-all ease-out">Get
+            it on Firefox</button>
         </div>
       </div>
     </section>
@@ -169,13 +172,18 @@
       <h2 class="pb-3"> Frequently Asked Questions</h2>
       <p>Here are some of our FAQs. If you have any other questions you'd like
         answered please feel free to email us.</p>
-      <ul id="accordian">
-        <li>
-          <label for="first" class="faq-question">
+      <ul id="accordian" class="text-start pt-18 pb-14 space-y-6">
+
+        <hr>
+
+        <li class="faq active">
+          <div for="first" class="faq-question flex justify-between">
             <!-- Question 1 -->
-            What is Bookmark?
-          </label>
-          <input type="radio" name="accordian" id="first" checked>
+            <span>
+              What is Bookmark?
+            </span>
+            <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
+          </div>
           <div class="faq-answer">
             <p>
               <!-- Answer 1 -->
@@ -183,14 +191,18 @@
               justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
             </p>
           </div>
-
         </li>
-        <li>
-          <label for="second" class="faq-question">
+
+        <hr>
+
+        <li class="faq">
+          <div for="second" class="faq-question flex justify-between">
             <!-- Question 2 -->
-            How can I request a new browser?
-          </label>
-          <input type="radio" name="accordian" id="second">
+            <span>
+              How can I request a new browser?
+            </span>
+            <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
+          </div>
           <div class="faq-answer">
             <p>
               <!-- Answer 2 -->
@@ -200,14 +212,18 @@
               Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
             </p>
           </div>
-
         </li>
-        <li>
-          <label for="first" class="faq-question">
+
+        <hr>
+
+        <li class="faq">
+          <div for="third" class="faq-question flex justify-between">
             <!-- Question 3 -->
-            Is there a mobile app?
-          </label>
-          <input type="radio" name="accordian" id="first">
+            <span>
+              Is there a mobile app?
+            </span>
+            <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
+          </div>
           <div class="faq-answer">
             <p>
               <!-- Answer 3 -->
@@ -216,14 +232,18 @@
               sollicitudin ex et ultricies bibendum.
             </p>
           </div>
-
         </li>
-        <li>
-          <label for="first" class="faq-question">
+
+        <hr>
+
+        <li class="faq">
+          <div for="fourth" class="faq-question flex justify-between">
             <!-- Question 4 -->
-            What about other Chromium browsers?
-          </label>
-          <input type="radio" name="accordian" id="first">
+            <span>
+              What about other Chromium browsers?
+            </span>
+            <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
+          </div>
           <div class="faq-answer">
             <p>
               <!-- Answer 4 -->
@@ -232,6 +252,8 @@
             </p>
           </div>
         </li>
+
+        <hr>
       </ul>
       <button class="btn-blue px-6">More Info</button>
 

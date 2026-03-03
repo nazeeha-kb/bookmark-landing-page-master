@@ -90,12 +90,17 @@
     }
 
     /* FAQs */
-    #accordian {
-        @apply text-start pt-18 pb-14;
+
+    .faq-question {
+        @apply cursor-pointer hover:text-cust-red-400 transition-colors duration-200 ease-out text-cust-blue-950/95;
     }
 
-    #accordian .faq-answer {
-        @apply max-h-0 transition-all duration-200 overflow-hidden;
+    .faq-answer {
+        @apply max-h-0 transition-all duration-200 overflow-hidden text-cust-blue-950/85 pt-0;
+    }
+
+    .arrow {
+        @apply text-cust-blue-600 font-bold text-2xl transition-all duration-300;
     }
 
     /* Hide the radio button */
@@ -104,7 +109,15 @@
     }
 
     /* If radio checked - faq expanded */
-    #accordian label + input[type="radio"]:checked + .faq-answer {
-        @apply max-h-50;
+    /* #accordian label + input[type="radio"]:checked + .faq-answer {
+        @apply max-h-80 pt-6;
+    } */
+
+    .faq.active .faq-answer {
+        @apply max-h-80 pt-6;
     }
-}
+
+    .faq.active .arrow {
+        @apply rotate-180 text-cust-red-400;
+    }
+} 
