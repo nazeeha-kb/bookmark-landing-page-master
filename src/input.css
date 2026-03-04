@@ -89,6 +89,37 @@
         @apply px-[1.8rem];
     }
 
+    /* Feature Tabs */
+
+    .tab {
+        @apply transition-opacity duration-300 absolute inset-0;
+    }
+
+    .tab-active {
+        @apply  opacity-100;
+    }
+
+    .tab-inactive {
+        @apply  opacity-0;
+    }
+
+    /* Active, inactive classes */
+    .active-tab-nav {
+        @apply text-cust-blue-950;
+    }
+
+    .active-tab-nav > div {
+        @apply scale-100 transition-transform duration-400 ease-out h-0.5 bg-cust-red-400 absolute origin-center -bottom-4;
+    }
+
+    .inactive-tab-nav {
+        @apply text-cust-blue-950/80;
+    }
+
+    .inactive-tab-nav > div {
+        @apply group-hover:scale-100 transition-transform duration-400 ease-out scale-0 h-0.5 bg-cust-red-400 absolute origin-center -bottom-4;
+    }
+
     /* FAQs */
 
     .faq-question {
@@ -96,22 +127,12 @@
     }
 
     .faq-answer {
-        @apply max-h-0 transition-all duration-200 overflow-hidden text-cust-blue-950/85 pt-0;
+        @apply max-h-0 transition-all duration-300 overflow-hidden text-cust-blue-950/85 pt-0 ease-in;
     }
 
     .arrow {
-        @apply text-cust-blue-600 font-bold text-2xl transition-all duration-300;
+        @apply text-cust-blue-600 font-bold text-2xl transition-all duration-500 w-fit h-fit;
     }
-
-    /* Hide the radio button */
-    #accordian label+input[type="radio"] {
-        @apply hidden;
-    }
-
-    /* If radio checked - faq expanded */
-    /* #accordian label + input[type="radio"]:checked + .faq-answer {
-        @apply max-h-80 pt-6;
-    } */
 
     .faq.active .faq-answer {
         @apply max-h-80 pt-6;
@@ -120,4 +141,4 @@
     .faq.active .arrow {
         @apply rotate-180 text-cust-red-400;
     }
-} 
+}
