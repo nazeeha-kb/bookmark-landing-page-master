@@ -92,15 +92,15 @@
     /* Feature Tabs */
 
     .tab {
-        @apply transition-opacity duration-300 absolute inset-0;
+        @apply transition-opacity duration-300 absolute inset-0 flex md:flex-row flex-col justify-center;
     }
 
     .tab-active {
-        @apply  opacity-100;
+        @apply  opacity-100 z-10;
     }
 
     .tab-inactive {
-        @apply  opacity-0;
+        @apply  opacity-0 z-0;
     }
 
     /* Active, inactive classes */
@@ -140,5 +140,13 @@
 
     .faq.active .arrow {
         @apply rotate-180 text-cust-red-400;
+    }
+
+    /* Image dispaly */
+    .img-display img{
+        @apply md:w-300 sm:w-130 w-120;
+    }
+    .img-display div {
+        @apply bg-cust-blue-600 absolute top-0;
     }
 }
