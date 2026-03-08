@@ -62,8 +62,16 @@ const collapseAll = () => {
 
 faqs.forEach(faq => {
     faq.addEventListener("click", () => {
-        // collapseAll();
-        faq.classList.toggle("active")
+        const isActive = faq.classList.contains("active");
+        console.log("is active:",isActive)
+        collapseAll();
+        if (isActive) {
+            faq.classList.remove("active");
+            console.log("removed active")
+        }
+        else {
+            faq.classList.add("active")
+        }
     })
 })
 
