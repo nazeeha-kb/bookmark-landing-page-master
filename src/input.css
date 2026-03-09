@@ -31,7 +31,7 @@
     }
 
     h3 {
-        @apply text-xl md:text-2xl lg:text-3xl;
+        @apply text-xl;
     }
 
     h1,
