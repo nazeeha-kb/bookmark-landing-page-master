@@ -28,7 +28,9 @@
     <nav
       class="md:static absolute inset-0 md:h-auto h-screen md:bg-transparent bg-cust-blue-950/95 md:text-cust-blue-950/80 text-cust-grey-50/90 z-20 md:p-0 p-10 pt-25  tracking-wider md:opacity-100 opacity-0 transition-all duration-300 flex flex-col items-center justify-between text-xl md:text-[0.8rem] md:font-[450]"
       id="menu">
-      <ul class="flex flex-col md:flex-row items-center text-center uppercase md:space-y-0 space-y-5 md:gap-10 w-120 md:w-auto" id="menu-item">
+      <ul
+        class="flex flex-col md:flex-row items-center text-center uppercase md:space-y-0 space-y-5 md:gap-10 w-120 md:w-auto"
+        id="menu-item">
         <hr class="bg-cust-grey-50/40 md:hidden block w-full">
         <li class="md:hover:text-cust-red-400"><a href="#">Features</a></li>
         <hr class="bg-cust-grey-50/40 md:hidden block w-full">
@@ -51,21 +53,22 @@
   </header>
 
   <!-- MAIN -->
-  <main class="space-y-40 md:space-y-20">
+  <main class="space-y-40 md:space-y-20 w-screen overflow-hidden">
 
     <!-- HERO -->
-    <section class="px-5 flex md:flex-row-reverse flex-col justify-center md:pt-15">
+    <section class="px-5 flex md:flex-row-reverse flex-col justify-center md:pt-15 md:gap-2 lg:gap-10 xl:gap-15">
       <div class="relative pt-10 pb-20 px-0 flex flex-col items-center img-display">
         <img src="images/illustration-hero.svg" alt="" class="">
         <div
-          class="self-start -z-10 -right-5 sm:translate-y-30 translate-y-25  rounded-l-full md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)]">
+          class="self-start -z-10 -right-5 lg:translate-y-40 sm:translate-y-30 translate-y-25  rounded-l-full md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)] lg:w-200 lg:h-60 lg:translate-x-100 xl:w-220 xl:h-85">
         </div>
       </div>
-      <div class="text-center flex flex-col justify-center items-center gap-8 max-w-120 self-center">
+      <div
+        class="md:text-start text-center flex flex-col justify-center md:items-start md:justify-start items-center md:items-start gap-8 max-w-120 self-center md:-translate-y-10">
         <h1 class="">A Simple Bookmark Manager</h1>
         <p>A clean and simple interface to organize your favourite websites. Open a new
           browser tab and see your sites load instantly. Try it for free.</p>
-        <div class="flex gap-4">
+        <div class="flex md:justify-start w-full gap-4">
           <button class="btn-blue">Get it on Chrome</button>
           <button
             class="btn bg-cust-grey-50 hover:bg-white hover:border-cust-blue-950/80 hover:border-2 transition-all ease-out">Get
@@ -84,30 +87,30 @@
 
       <div>
         <!-- Tab Navigation -->
-         <div class="flex flex-col md:items-center">
-           <ul class="flex flex-col md:flex-row items-center justify-center md:gap-12 space-y-4 pt-6 pb-20">
-             <hr class="md:hidden">
-             <li data-tab-index="0" class="tab-nav active-tab-nav relative group">
-               <button class="">Simple Bookmarking</button>
-               <div class="left-1/2 -translate-x-18 w-35">
-               </div>
-             </li>
-             <hr class="md:hidden">
-             <li data-tab-index="1" class="tab-nav inactive-tab-nav relative group">
-               <button class="">Speedy Searching</button>
-               <div class="left-1/2 -translate-x-14  w-28">
-               </div>
-             </li>
-             <hr class="md:hidden">
-             <li data-tab-index="2" class="tab-nav inactive-tab-nav relative group">
-               <button class="">Easy Sharing</button>
-               <div class="left-1/2 -translate-x-11 w-22">
-               </div>
-             </li>
-             <hr class="md:hidden">
-           </ul>
-           <hr class="hidden md:block -translate-y-20 w-120">
-         </div>
+        <div class="flex flex-col md:items-center lg:mb-20">
+          <ul class="flex flex-col md:flex-row items-center justify-center md:gap-12 space-y-4 pt-6 pb-20">
+            <hr class="md:hidden w-[80%] block">
+            <li data-tab-index="0" class="tab-nav active-tab-nav relative group">
+              <button class="">Simple Bookmarking</button>
+              <div class="left-1/2 -translate-x-18 w-35">
+              </div>
+            </li>
+            <hr class="md:hidden w-[80%] block">
+            <li data-tab-index="1" class="tab-nav inactive-tab-nav relative group">
+              <button class="">Speedy Searching</button>
+              <div class="left-1/2 -translate-x-14  w-28">
+              </div>
+            </li>
+            <hr class="md:hidden w-[80%] block">
+            <li data-tab-index="2" class="tab-nav inactive-tab-nav relative group">
+              <button class="">Easy Sharing</button>
+              <div class="left-1/2 -translate-x-11 w-22">
+              </div>
+            </li>
+            <hr class="md:hidden w-[80%] block">
+          </ul>
+          <hr class="hidden md:block -translate-y-20 w-120">
+        </div>
 
         <!-- TABS -->
         <ul class="relative h-110 w-screen" id="tabs">
@@ -116,12 +119,13 @@
             <div class="relative flex flex-col justify-center items-center img-display md:-translate-y-20">
               <img src="images/illustration-features-tab-1.svg" alt="" class="px-8">
               <div
-                class="rounded-r-full md:translate-y-40 translate-y-10 -z-10 -left-8  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)]">
+                class="rounded-r-full md:translate-y-40 translate-y-10 -z-10 -left-8  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)] lg:w-200 lg:h-60 lg:-translate-x-100 xl:w-220 xl:h-85">
               </div>
             </div>
-            <div class="pt-20 md:text-start">
-              <h3 class="pb-3 text-2xl">Bookmark in one click</h3>
-              <p class="md:pt-2 md:pb-7">
+            <div
+              class="pt-20 md:text-start flex flex-col justify-center md:items-start md:justify-start items-center md:w-auto lg:w-100 -translate-y-10">
+              <h3 class="pb-3 text-2xl md:text-3xl">Bookmark in one click</h3>
+              <p class="md:pt-2 md:pb-7 w-100">
                 Organize your bookmarks however you like. Our simple drag-and-drop interface
                 gives you complete control over how you manage your favourite sites.</p>
               <button class="btn-blue md:block hidden">More Info</button>
@@ -132,12 +136,14 @@
             <div class="relative flex flex-col justify-center items-center img-display">
               <img src="images/illustration-features-tab-2.svg" alt="" class="px-8 md:-translate-y-15">
               <div
-                class="rounded-r-full translate-y-16 -z-10 -left-9  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)]">
+                class="rounded-r-full translate-y-16 -z-10 -left-9  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)] lg:w-200 lg:h-60 lg:-translate-x-100 xl:w-220 xl:h-85">
               </div>
             </div>
-            <div class="pt-10 px-6 md:text-start">
-              <h3 class="pb-3 text-2xl">Intelligent search</h3>
-              <p class="md:pt-2 md:pb-7">Our powerful search feature will help you find saved sites in no time at all.
+            <div
+              class="pt-10 px-6 md:text-start flex flex-col justify-center md:items-start md:justify-start items-center md:w-auto lg:w-100">
+              <h3 class="pb-3 text-2xl md:text-3xl">Intelligent search</h3>
+              <p class="md:pt-2 md:pb-7 w-100">Our powerful search feature will help you find saved sites in no time at
+                all.
                 No need to trawl through all of your bookmarks.</p>
               <button class="btn-blue md:block hidden">More Info</button>
             </div>
@@ -148,12 +154,14 @@
             <div class="relative flex flex-col justify-center items-center img-display">
               <img src="images/illustration-features-tab-3.svg" alt="" class="px-8 md:-translate-y-15">
               <div
-                class="rounded-r-full translate-y-20 -z-10 -left-10  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)]">
+                class="rounded-r-full translate-y-20 -z-10 -left-10  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)] lg:w-200 lg:h-60 lg:-translate-x-100 xl:w-220 xl:h-85">
               </div>
             </div>
-            <div class="pt-20 px-6 md:text-start">
-              <h3 class="pb-3 text-2xl">Share your bookmarks</h3>
-              <p class="md:pt-2 md:pb-7"> Easily share your bookmarks and collections with others. Create a shareable
+            <div
+              class="pt-20 px-6 md:text-start flex flex-col justify-center md:items-start md:justify-start items-center md:w-auto lg:w-100 -translate-y-10">
+              <h3 class="pb-3 text-2xl md:text-3xl">Share your bookmarks</h3>
+              <p class="md:pt-2 md:pb-7 w-100"> Easily share your bookmarks and collections with others. Create a
+                shareable
                 link that you can send at the click of a button.</p>
               <button class="btn-blue md:block hidden">More Info</button>
             </div>
@@ -163,13 +171,13 @@
     </section>
 
     <!-- DOWNLOAD -->
-    <section class="text-center px-5 flex flex-col items-center">
+    <section class="text-center px-5 flex flex-col items-center lg:mt-15 lg:mb-55">
       <div class="max-w-120">
         <h2 class="pb-3">Download the extension</h2>
         <p class="">We've got more browsers in the pipeline. Please do let us know if you've
           got a favourite you'd like us to prioritize.</p>
       </div>
-      <div class="flex flex-col items-center gap-8 pt-10">
+      <div class="flex flex-col lg:flex-row items-center gap-8 pt-10">
         <article class="card">
           <div class="card__item">
             <img src="images/logo-chrome.svg" alt="">
@@ -179,7 +187,7 @@
           <img src="images/bg-dots.svg" alt="" class="bg-dots">
           <button class="btn-blue">Add & Install Extensions</button>
         </article>
-        <article class="card">
+        <article class="card lg:translate-y-10">
           <div class="card__item">
             <img src="images/logo-firefox.svg" alt="">
             <h3>Add to Firefox</h3>
@@ -188,7 +196,7 @@
           <img src="images/bg-dots.svg" alt="" class="bg-dots">
           <button class="btn-blue">Add & Install Extensions</button>
         </article>
-        <article class="card">
+        <article class="card lg:translate-y-20">
           <div class="card__item">
             <img src="images/logo-opera.svg" alt="">
             <h3>Add to Opera</h3>
@@ -211,7 +219,7 @@
 
         <hr>
 
-        <li class="faq active">
+        <li class="faq">
           <div for="first" class="faq-question flex justify-between">
             <!-- Question 1 -->
             <span>
@@ -296,12 +304,15 @@
 
     <!-- CONTACT INFO -->
     <section class="px-5 bg-cust-blue-600 text-white pt-20 pb-16 flex flex-col justify-center items-center text-center">
-      <div class="max-w-140">
+      <div class="max-w-140 flex flex-col items-center">
         <small class="uppercase tracking-[0.3rem]">35,000+ already joined</small>
-        <h2 class="text-white pt-3 pb-6">Stay up-to-date with what we're doing</h2>
-        <form id="form" class="flex flex-col md:flex-row md:gap-4 w-full">
-          <input type="email" id="email" placeholder="Enter your email address"
-            class="bg-white w-full placeholder:text-cust-blue-950/20 py-3 px-4 rounded-sm text-cust-blue-950">
+        <h2 class="text-white pt-3 pb-6 lg:text-4xl lg:py-10">Stay up-to-date with what we're doing</h2>
+        <form id="form" class="flex flex-col md:flex-row md:gap-4 w-full lg:w-120">
+          <div class="relative">
+            <input type="email" id="email" placeholder="Enter your email address" aria-describedby="email-error"
+              class="bg-white w-full placeholder:text-cust-blue-950/20 py-3 px-4 rounded-sm text-cust-blue-950">
+            <span id="email-error" class="absolute top-11 left-0 w-full bg-cust-red-400 rounded-b-md"></span>
+          </div>
           <button type="submit"
             class="md:mt-0 mt-5 btn-blue bg-cust-red-400 hover:bg-white hover:border-2 hover:border-cust-red-400 hover:text-cust-red-400 w-full md:w-[40%]">Contact
             Us
@@ -312,23 +323,24 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-cust-blue-950 text-white flex flex-col md:flex-row md:justify-between justify-center items-center text-center py-10 md:px-20">
+  <footer
+    class="bg-cust-blue-950 text-white flex flex-col md:flex-row md:justify-between justify-center items-center text-center py-10 md:px-20">
     <div class="flex flex-col md:flex-row gap-8">
       <img src="images/logo-bookmark-white.svg" alt="" class="object-contain">
       <nav class="text-cust-grey-50/80 uppercase py-10 md:py-0">
         <ul class="flex flex-col md:flex-row gap-5">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="hover:text-cust-red-400"><a href="#">Features</a></li>
+          <li class="hover:text-cust-red-400"><a href="#">Pricing</a></li>
+          <li class="hover:text-cust-red-400"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div class="socials flex gap-8">
-      <a href="#"> 
-        <i class="text-2xl fa-brands fa-square-facebook"></i>
+      <a href="#">
+        <i class="text-2xl hover:text-cust-red-400 fa-brands fa-square-facebook"></i>
       </a>
       <a href="#">
-        <i class="text-2xl fa-brands fa-twitter"></i>
+        <i class="text-2xl hover:text-cust-red-400 fa-brands fa-twitter"></i>
       </a>
     </div>
     <p class="attribution hidden">

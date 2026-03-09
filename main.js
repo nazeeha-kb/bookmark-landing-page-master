@@ -1,5 +1,6 @@
 const faqs = document.querySelectorAll(".faq")
 
+// Menu
 const menuBtn = document.getElementById("menu-btn")
 const menuIcon = document.getElementById("menu-icon")
 const menu = document.getElementById("menu")
@@ -8,8 +9,14 @@ const logoWhite = document.getElementById("logo-white")
 const body = document.getElementById("body");
 const menuItem = document.getElementById("menu-item");
 
+// Tabs
 const tabNavs = document.querySelectorAll(".tab-nav")
 const tabs = document.getElementById("tabs")
+
+// Form - email error handling
+const form = document.getElementById("form");
+const email = document.getElementById("email");
+const emailError = document.getElementById("email-error");
 
 // ----------- Applying and removing inert attribute ----------------
 
@@ -63,7 +70,7 @@ const collapseAll = () => {
 faqs.forEach(faq => {
     faq.addEventListener("click", () => {
         const isActive = faq.classList.contains("active");
-        console.log("is active:",isActive)
+        console.log("is active:", isActive)
         collapseAll();
         if (isActive) {
             faq.classList.remove("active");
@@ -125,4 +132,37 @@ tabNavs.forEach(tabNav => {
         tabNav.classList.add("active-tab-nav");
         tabNav.classList.remove("inactive-tab-nav");
     })
+})
+
+// ----------- Email error handling ----------------
+
+const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    console.log(re.test(String(email).toLowerCase()))
+    return re.test(String(email).toLowerCase());
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const controller = email.parentElement;
+    const emailValue = email.value.trim()
+
+    if (emailValue == "") {
+        emailError.classList.remove("hidden");
+        email.classList.add("outline-1", "outline-cust-red-400");
+        controller.classList.add("md:mb-0", "mb-4");
+        emailError.innerHTML = `<i>The field is empty</i>`;
+    }
+    if (!validateEmail(emailValue)) {
+        emailError.classList.remove("hidden");
+        email.classList.add("outline-1", "outline-cust-red-400");
+        controller.classList.add("md:mb-0", "mb-4");
+        emailError.innerHTML = `<i>Whoops, make sure it's an email</i>`;
+    }
+    else {
+        emailError.classList.add("hidden");
+        controller.classList.remove("md:mb-0", "mb-4");
+        email.classList.remove("outline-1", "outline-cust-red-400");
+        form.reset()
+    }
 })

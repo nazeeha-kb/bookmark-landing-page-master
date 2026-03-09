@@ -23,15 +23,15 @@
 
 @layer base {
     h1 {
-        @apply text-3xl;
+        @apply text-3xl md:text-4xl lg:text-5xl;
     }
 
     h2 {
-        @apply text-2xl;
+        @apply text-2xl md:text-3xl;
     }
 
     h3 {
-        @apply text-xl;
+        @apply text-xl md:text-2xl lg:text-3xl;
     }
 
     h1,
@@ -92,7 +92,7 @@
     /* Feature Tabs */
 
     .tab {
-        @apply transition-opacity duration-300 absolute inset-0 flex md:flex-row flex-col justify-center;
+        @apply transition-opacity duration-300 absolute inset-0 flex md:flex-row flex-col justify-center lg:gap-10 md:gap-6;
     }
 
     .tab-active {
@@ -144,7 +144,7 @@
 
     /* Image dispaly */
     .img-display img{
-        @apply md:w-300 sm:w-130 w-120;
+        @apply xl:w-160 lg:w-140 md:w-300 sm:w-130 w-120;
     }
     .img-display div {
         @apply bg-cust-blue-600 absolute top-0;
