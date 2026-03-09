@@ -123,11 +123,11 @@
     /* FAQs */
 
     .faq-question {
-        @apply cursor-pointer hover:text-cust-red-400 transition-colors duration-200 ease-out text-cust-blue-950/95;
+        @apply cursor-pointer hover:text-cust-red-400 transition-colors duration-200 ease-out text-cust-blue-950/95 flex justify-between w-full my-6;
     }
 
     .faq-answer {
-        @apply max-h-0 transition-all duration-300 overflow-hidden text-cust-blue-950/85 pt-0 ease-in;
+        @apply max-h-0 transition-all duration-300 overflow-hidden text-cust-blue-950/85 pb-0 ease-in;
     }
 
     .arrow {
@@ -135,7 +135,7 @@
     }
 
     .faq.active .faq-answer {
-        @apply max-h-80 pt-6;
+        @apply max-h-80 pb-6;
     }
 
     .faq.active .arrow {

@@ -69,18 +69,24 @@ const collapseAll = () => {
 
 faqs.forEach(faq => {
     faq.addEventListener("click", () => {
-        const isActive = faq.classList.contains("active");
+        const faqQuestion = faq.querySelector(".faq-question");
+        const isActive = faqQuestion.getAttribute("aria-expanded") === "true";
         console.log("is active:", isActive)
         collapseAll();
         if (isActive) {
+            faqQuestion.setAttribute("aria-expanded", "false");
             faq.classList.remove("active");
             console.log("removed active")
         }
         else {
+            faqQuestion.setAttribute("aria-expanded", "true");
             faq.classList.add("active")
         }
     })
 })
+
+// ------------------------ MENU -------------------------
+
 
 const toggleMenu = () => {
     if (menuBtn.getAttribute("aria-expanded") === "false") {
@@ -106,11 +112,15 @@ const toggleMenu = () => {
 // Menu
 menuBtn.addEventListener("click", toggleMenu)
 
+// ------------------------ TABS -------------------------
+
 // Tabs navigation logic.
 const deactivateAll = () => {
     Array.from(tabs.children).forEach(tab => {
         tab.classList.remove("tab-active")
         tab.classList.add("tab-inactive")
+        // toggle aria-hidden
+        tab.setAttribute("aria-hidden", "true")
     })
     tabNavs.forEach(tabNav => {
         tabNav.classList.remove("active-tab-nav");
@@ -121,12 +131,17 @@ const deactivateAll = () => {
 tabNavs.forEach(tabNav => {
     tabNav.addEventListener("click", () => {
         const navIndex = Number(tabNav.dataset.tabIndex)
+        const tab = tabs.children[navIndex];
 
         // Remove all active class
         deactivateAll()
+        
+        // toggle aria-hidden
+        tab.setAttribute("aria-hidden", "false")
+        
         // Add Active class to this tab
-        tabs.children[navIndex].classList.remove("tab-inactive");
-        tabs.children[navIndex].classList.add("tab-active");
+        tab.classList.remove("tab-inactive");
+        tab.classList.add("tab-active");
 
         // Change the style of this tab nav
         tabNav.classList.add("active-tab-nav");

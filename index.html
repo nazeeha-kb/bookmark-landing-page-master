@@ -20,8 +20,8 @@
   <!-- HEADER -->
   <header class="py-10 px-10 relative md:flex flex-row justify-between items-center">
     <div class="flex justify-between md:static absolute z-30 w-[80vw]">
-      <a href="/" id="logo-default" class=""><img src="images/logo-bookmark.svg" alt=""></a>
-      <a href="/" id="logo-white" class="hidden"><img src="images/logo-bookmark-all-white.svg" alt=""></a>
+      <a href="/" id="logo-default" class=""><img src="images/logo-bookmark.svg" alt="Bookmark logo"></a>
+      <a href="/" id="logo-white" class="hidden"><img src="images/logo-bookmark-all-white.svg" alt="Bookmark Logo"></a>
       <button class="md:hidden" id="menu-btn" aria-label="menu" aria-expanded="false"><i class="fa-solid fa-bars"
           id="menu-icon"></i></button>
     </div>
@@ -31,13 +31,19 @@
       <ul
         class="flex flex-col md:flex-row items-center text-center uppercase md:space-y-0 space-y-5 md:gap-10 w-120 md:w-auto"
         id="menu-item">
-        <hr class="bg-cust-grey-50/40 md:hidden block w-full">
-        <li class="md:hover:text-cust-red-400"><a href="#">Features</a></li>
-        <hr class="bg-cust-grey-50/40 md:hidden block w-full">
-        <li class="md:hover:text-cust-red-400"><a href="#">Pricing</a></li>
-        <hr class="bg-cust-grey-50/40 md:hidden block w-full">
-        <li class="md:hover:text-cust-red-400"><a href="#">Contact</a></li>
-        <hr class="bg-cust-grey-50/40 md:hidden block w-full">
+        <li class="md:hover:text-cust-red-400">
+          <hr class="bg-cust-grey-50/40 md:hidden block w-full">
+          <a href="#">Features</a>
+        </li>
+        <li class="md:hover:text-cust-red-400">
+          <hr class="bg-cust-grey-50/40 md:hidden block w-full">
+          <a href="#">Pricing</a>
+        </li>
+        <li class="md:hover:text-cust-red-400">
+          <hr class="bg-cust-grey-50/40 md:hidden block w-full">
+          <a href="#">Contact</a>
+          <hr class="bg-cust-grey-50/40 md:hidden block w-full">
+        </li>
         <button
           class="btn-blue bg-transparent border-2 border-cust-grey-50 md:border-cust-red-400 uppercase hover:text-cust-grey-50 md:bg-cust-red-400 md:hover:bg-white md:hover:text-cust-red-400 md:px-8 md:w-auto w-full">Login</button>
       </ul>
@@ -58,7 +64,7 @@
     <!-- HERO -->
     <section class="px-5 flex md:flex-row-reverse flex-col justify-center md:pt-15 md:gap-2 lg:gap-10 xl:gap-15">
       <div class="relative pt-10 pb-20 px-0 flex flex-col items-center img-display">
-        <img src="images/illustration-hero.svg" alt="" class="">
+        <img src="images/illustration-hero.svg" alt="illustration hero" class="">
         <div
           class="self-start -z-10 -right-5 lg:translate-y-40 sm:translate-y-30 translate-y-25  rounded-l-full md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)] lg:w-200 lg:h-60 lg:translate-x-100 xl:w-220 xl:h-85">
         </div>
@@ -115,9 +121,9 @@
         <!-- TABS -->
         <ul class="relative h-110 w-screen" id="tabs">
           <!-- TAB 1 -->
-          <li class="tab tab-active">
+          <li class="tab tab-active" aria-hidden="false">
             <div class="relative flex flex-col justify-center items-center img-display md:-translate-y-20">
-              <img src="images/illustration-features-tab-1.svg" alt="" class="px-8">
+              <img src="images/illustration-features-tab-1.svg" alt="illustration tab 1" class="px-8">
               <div
                 class="rounded-r-full md:translate-y-40 translate-y-10 -z-10 -left-8  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)] lg:w-200 lg:h-60 lg:-translate-x-100 xl:w-220 xl:h-85">
               </div>
@@ -132,9 +138,10 @@
             </div>
           </li>
           <!-- TAB 2 -->
-          <li class="tab tab-inactive">
+          <li class="tab tab-inactive" aria-hidden="true">
             <div class="relative flex flex-col justify-center items-center img-display">
-              <img src="images/illustration-features-tab-2.svg" alt="" class="px-8 md:-translate-y-15">
+              <img src="images/illustration-features-tab-2.svg" alt="illustration tab 2"
+                class="px-8 md:-translate-y-15">
               <div
                 class="rounded-r-full translate-y-16 -z-10 -left-9  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)] lg:w-200 lg:h-60 lg:-translate-x-100 xl:w-220 xl:h-85">
               </div>
@@ -150,9 +157,10 @@
 
           </li>
           <!-- TAB 3 -->
-          <li class="tab tab-inactive">
+          <li class="tab tab-inactive" aria-hidden="true">
             <div class="relative flex flex-col justify-center items-center img-display">
-              <img src="images/illustration-features-tab-3.svg" alt="" class="px-8 md:-translate-y-15">
+              <img src="images/illustration-features-tab-3.svg" alt="illustration tab 3"
+                class="px-8 md:-translate-y-15">
               <div
                 class="rounded-r-full translate-y-20 -z-10 -left-10  md:h-60 h-[clamp(6rem,5.5rem+27.5vw,18.5rem)] md:w-80 w-[clamp(14.5rem,5rem+57.5vw,30rem)] lg:w-200 lg:h-60 lg:-translate-x-100 xl:w-220 xl:h-85">
               </div>
@@ -180,29 +188,29 @@
       <div class="flex flex-col lg:flex-row items-center gap-8 pt-10">
         <article class="card">
           <div class="card__item">
-            <img src="images/logo-chrome.svg" alt="">
+            <img src="images/logo-chrome.svg" alt="Chrome logo">
             <h3>Add to Chrome</h3>
             <p>Minimum version 62</p>
           </div>
-          <img src="images/bg-dots.svg" alt="" class="bg-dots">
+          <img src="images/bg-dots.svg" class="bg-dots">
           <button class="btn-blue">Add & Install Extensions</button>
         </article>
         <article class="card lg:translate-y-10">
           <div class="card__item">
-            <img src="images/logo-firefox.svg" alt="">
+            <img src="images/logo-firefox.svg" alt="Firefox logo">
             <h3>Add to Firefox</h3>
             <p>Minimum version 55</p>
           </div>
-          <img src="images/bg-dots.svg" alt="" class="bg-dots">
+          <img src="images/bg-dots.svg" class="bg-dots">
           <button class="btn-blue">Add & Install Extensions</button>
         </article>
         <article class="card lg:translate-y-20">
           <div class="card__item">
-            <img src="images/logo-opera.svg" alt="">
+            <img src="images/logo-opera.svg" alt="Opera logo">
             <h3>Add to Opera</h3>
             <p>Minimum version 46</p>
           </div>
-          <img src="images/bg-dots.svg" alt="" class="bg-dots">
+          <img src="images/bg-dots.svg" class="bg-dots">
           <button class="btn-blue">Add & Install Extensions</button>
         </article>
       </div>
@@ -215,38 +223,38 @@
         <p>Here are some of our FAQs. If you have any other questions you'd like
           answered please feel free to email us.</p>
       </div>
-      <ul id="accordian" class="text-start pt-18 pb-14 space-y-6 max-w-120">
+      <ul id="accordian" class="text-start pt-18 pb-14 max-w-120" aria-label="F A Qs">
 
-        <hr>
 
         <li class="faq">
-          <div for="first" class="faq-question flex justify-between">
+          <hr>
+          <button class="faq-question" aria-controls="faq-answer-1" aria-expanded="false">
             <!-- Question 1 -->
             <span>
               What is Bookmark?
             </span>
             <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
-          </div>
-          <div class="faq-answer">
+          </button>
+          <div class="faq-answer" id="faq-answer-1">
             <p>
               <!-- Answer 1 -->
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
               justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
             </p>
           </div>
+          <hr>
         </li>
 
-        <hr>
 
         <li class="faq">
-          <div for="second" class="faq-question flex justify-between">
+          <button class="faq-question" aria-controls="faq-answer-2" aria-expanded="false">
             <!-- Question 2 -->
             <span>
               How can I request a new browser?
             </span>
             <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
-          </div>
-          <div class="faq-answer">
+          </button>
+          <div class="faq-answer" id="faq-answer-2">
             <p>
               <!-- Answer 2 -->
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
@@ -255,19 +263,19 @@
               Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
             </p>
           </div>
+          <hr>
         </li>
 
-        <hr>
 
         <li class="faq">
-          <div for="third" class="faq-question flex justify-between">
+          <button class="faq-question" aria-controls="faq-answer-3" aria-expanded="false">
             <!-- Question 3 -->
             <span>
               Is there a mobile app?
             </span>
             <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
-          </div>
-          <div class="faq-answer">
+          </button>
+          <div class="faq-answer" id="faq-answer-3">
             <p>
               <!-- Answer 3 -->
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
@@ -275,28 +283,28 @@
               sollicitudin ex et ultricies bibendum.
             </p>
           </div>
+          <hr>
         </li>
 
-        <hr>
 
         <li class="faq">
-          <div for="fourth" class="faq-question flex justify-between">
+          <button class="faq-question" aria-controls="faq-answer-4" aria-expanded="false">
             <!-- Question 4 -->
             <span>
               What about other Chromium browsers?
             </span>
             <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
-          </div>
-          <div class="faq-answer">
+          </button>
+          <div class="faq-answer" id="faq-answer-4">
             <p>
               <!-- Answer 4 -->
               Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
               vitae neque eget nisl gravida pellentesque non ut velit.
             </p>
           </div>
+          <hr>
         </li>
 
-        <hr>
       </ul>
       <button class="btn-blue px-6">More Info</button>
 
@@ -326,7 +334,7 @@
   <footer
     class="bg-cust-blue-950 text-white flex flex-col md:flex-row md:justify-between justify-center items-center text-center py-10 md:px-20">
     <div class="flex flex-col md:flex-row gap-8">
-      <img src="images/logo-bookmark-white.svg" alt="" class="object-contain">
+      <img src="images/logo-bookmark-white.svg" alt="Bookmark logo" class="object-contain">
       <nav class="text-cust-grey-50/80 uppercase py-10 md:py-0">
         <ul class="flex flex-col md:flex-row gap-5">
           <li class="hover:text-cust-red-400"><a href="#">Features</a></li>
@@ -336,10 +344,10 @@
       </nav>
     </div>
     <div class="socials flex gap-8">
-      <a href="#">
+      <a href="#" aria-label="Facebook link">
         <i class="text-2xl hover:text-cust-red-400 fa-brands fa-square-facebook"></i>
       </a>
-      <a href="#">
+      <a href="#" aria-label="twitter link">
         <i class="text-2xl hover:text-cust-red-400 fa-brands fa-twitter"></i>
       </a>
     </div>
