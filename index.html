@@ -28,25 +28,25 @@
     <nav
       class="md:static absolute inset-0 md:h-auto h-screen md:bg-transparent bg-cust-blue-950/95 md:text-cust-blue-950/80 text-cust-grey-50/90 z-20 md:p-0 p-10 pt-25  tracking-wider md:opacity-100 opacity-0 transition-all duration-300 flex flex-col items-center justify-between text-xl md:text-[0.8rem] md:font-[450]"
       id="menu">
-      <ul
-        class="flex flex-col md:flex-row items-center text-center uppercase md:space-y-0 space-y-5 md:gap-10 w-120 md:w-auto"
-        id="menu-item">
-        <li class="md:hover:text-cust-red-400">
-          <hr class="bg-cust-grey-50/40 md:hidden block w-full">
-          <a href="#">Features</a>
-        </li>
-        <li class="md:hover:text-cust-red-400">
-          <hr class="bg-cust-grey-50/40 md:hidden block w-full">
-          <a href="#">Pricing</a>
-        </li>
-        <li class="md:hover:text-cust-red-400">
-          <hr class="bg-cust-grey-50/40 md:hidden block w-full">
-          <a href="#">Contact</a>
-          <hr class="bg-cust-grey-50/40 md:hidden block w-full">
-        </li>
+      <div class="flex md:flex-row flex-col md:gap-10 w-full md:w-auto">
+        <ul class="flex flex-col md:flex-row items-center text-center uppercase md:gap-10 w-full md:w-auto" id="menu-item">
+          <li class="md:w-auto w-full md:hover:text-cust-red-400">
+            <hr class="mb-5 bg-cust-grey-50/40 md:hidden block w-full">
+            <a href="#">Features</a>
+          </li>
+          <li class="md:w-auto w-full md:hover:text-cust-red-400">
+            <hr class="my-5 bg-cust-grey-50/40 md:hidden block w-full">
+            <a href="#">Pricing</a>
+          </li>
+          <li class="md:w-auto w-full md:hover:text-cust-red-400">
+            <hr class="my-5 bg-cust-grey-50/40 md:hidden block w-full">
+            <a href="#">Contact</a>
+            <hr class="my-5 bg-cust-grey-50/40 md:hidden block w-full">
+          </li>
+        </ul>
         <button
           class="btn-blue bg-transparent border-2 border-cust-grey-50 md:border-cust-red-400 uppercase hover:text-cust-grey-50 md:bg-cust-red-400 md:hover:bg-white md:hover:text-cust-red-400 md:px-8 md:w-auto w-full">Login</button>
-      </ul>
+      </div>
       <div class="socials flex gap-8 items-center justify-center text-center md:hidden">
         <a href="#">
           <i class="text-2xl fa-brands fa-square-facebook"></i>
@@ -130,8 +130,8 @@
             </div>
             <div
               class="pt-20 md:text-start flex flex-col justify-center md:items-start md:justify-start items-center md:w-auto lg:w-100 -translate-y-10">
-              <h3 class="pb-3 text-2xl md:text-3xl">Bookmark in one click</h3>
-              <p class="md:pt-2 md:pb-7 w-100">
+              <h3 class="pb-3 text-2xl md:text-3xl md:pt-0 pt-6">Bookmark in one click</h3>
+              <p class="md:pt-2 md:pb-7 w-100 px-8 md:px-0">
                 Organize your bookmarks however you like. Our simple drag-and-drop interface
                 gives you complete control over how you manage your favourite sites.</p>
               <button class="btn-blue md:block hidden">More Info</button>
@@ -149,7 +149,7 @@
             <div
               class="pt-10 px-6 md:text-start flex flex-col justify-center md:items-start md:justify-start items-center md:w-auto lg:w-100">
               <h3 class="pb-3 text-2xl md:text-3xl">Intelligent search</h3>
-              <p class="md:pt-2 md:pb-7 w-100">Our powerful search feature will help you find saved sites in no time at
+              <p class="md:pt-2 md:pb-7 w-100 px-8 md:px-0">Our powerful search feature will help you find saved sites in no time at
                 all.
                 No need to trawl through all of your bookmarks.</p>
               <button class="btn-blue md:block hidden">More Info</button>
@@ -168,7 +168,7 @@
             <div
               class="pt-20 px-6 md:text-start flex flex-col justify-center md:items-start md:justify-start items-center md:w-auto lg:w-100 -translate-y-10">
               <h3 class="pb-3 text-2xl md:text-3xl">Share your bookmarks</h3>
-              <p class="md:pt-2 md:pb-7 w-100"> Easily share your bookmarks and collections with others. Create a
+              <p class="md:pt-2 md:pb-7 w-100 px-8 md:px-0"> Easily share your bookmarks and collections with others. Create a
                 shareable
                 link that you can send at the click of a button.</p>
               <button class="btn-blue md:block hidden">More Info</button>
@@ -290,7 +290,7 @@
         <li class="faq">
           <button class="faq-question" aria-controls="faq-answer-4" aria-expanded="false">
             <!-- Question 4 -->
-            <span>
+            <span class="md:text-center text-start">
               What about other Chromium browsers?
             </span>
             <i class="fa-solid fa-angle-down arrow" id="arrow"></i>
